@@ -1,0 +1,448 @@
+/*ENCASO DE QUE NO FUNCIONE EL NORMALIZE*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ebrima', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+}
+
+body{
+    background: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+/*VARIABLES DE COLORES*/
+:root{
+    --principal:#0a3269;
+    --secunadrio:#dd9f38;
+    --negro:#212121;
+    --blanco:#e6e6e6;
+    --blancobtn:#ffff;
+}
+
+/*BARRA SUPERIOR*/
+
+.barraup{
+    width: 100%;
+    height: 200px;
+    z-index: 300;
+}
+
+/*IMAGEN DE FONDO*/
+.imgbg{
+    z-index: 500;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background-image: url(../imgs/uturecorte.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/*CAPA DE DIFUMINCACION*/
+.imab{
+    z-index: 700;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0));
+    backdrop-filter: blur(3px);
+}
+
+/*LINEA DIVISORIA*/
+.bgf{
+    width: 100%;
+    height: 7px;
+    background: #212121ad;
+    position: absolute;
+    top:193px;
+    z-index: 7000;
+}
+
+
+/*LOGOS Y CAPAS DE BARRA SUPERIOR*/
+
+
+.logo1{
+    position: absolute;
+    z-index: 6000;
+    height:120px;
+    top:70px;
+}
+
+.logo2{
+    position: absolute;
+    z-index: 5000;
+    height: 80px;
+    left: 130px;
+    top: 90px;
+}
+
+/*.tapas{
+    position: absolute;
+    top: 50px;
+}
+
+.tapa{
+    width: 400px;
+    height: 150px;
+    border-radius: 0px 200px 0px 0px;
+    position: absolute;
+}
+
+.t1{
+    background: var(--principal);
+    z-index: 4000;
+}
+
+.t2{
+    background: #104a9b;
+    z-index: 3000;
+    left: 10px; 
+}
+
+.t3{
+    background: var(--secunadrio);
+    z-index: 2000;
+    left:20px;
+}
+
+.t4{
+    background-color: #f8b74e;
+    z-index: 1000;
+    left:30px;
+}*/
+
+/*BARRA DE NAVEGACION*/
+
+.conte{
+    background: var(--principal);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contl{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    margin: 20px;
+}
+
+.contr{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    z-index: 8000;
+    margin: 20px;
+}
+
+.conte a{
+    text-decoration: none;
+    color: #0a3269;
+    font-size: 20px;
+}
+
+
+
+a .btn-log{
+    color: var(--blancobtn);
+    
+}
+
+
+/*BOTONES DE ACCESO DE LA BARRA DE NAVEGACION*/
+
+.btn-inicio{
+    background: var(--secunadrio);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    height: auto;
+    padding: 13px 24px;
+    border-radius: 100px;
+    transition: all 0.8ms;
+    /*animation: move 1s initial;*/
+}
+
+.btn-publico{
+    background: var(--blancobtn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    height: auto;
+    padding: 13px;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.8ms;
+    
+    
+}
+
+.btn-eventos{
+    background: var(--blancobtn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    height: auto;
+    padding: 13px;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.8ms;
+}
+
+.btn-estudiantes{
+    background: var(--blancobtn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    height: auto;
+    padding: 13px;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.8ms;
+}
+
+.btn-log{
+    border: var(--blancobtn) solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;	
+    height: auto;
+    padding: 13px;
+    border-radius: 100px;
+    margin: 10px;
+    transition: all 0.8ms;
+    
+}
+
+.conte a:hover{
+    
+    transform: translateX(-3px) translateY(-2px);
+    transition: all 0.8ms;
+
+}
+
+.cuerpo{
+    width: 100%;
+    height: 1250px;
+}
+
+/*FOOTER*/
+
+.footer{
+    background: var(--principal);
+    width: 100%;
+    color: #e6e6e6;
+    margin-top:auto ;
+}
+
+.footer h1{
+    font-size: 30px;
+    margin: 10px;
+}
+
+.cont-by{
+    background: var(--principal);
+    color: #e6e6e6;
+    margin: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    transition: all 0.8ms;
+}
+
+
+.cont-ft{
+    background: #051e41;
+    color: #e6e6e6;
+    padding: 4px;
+}
+
+.cont-ft a{
+    text-decoration: none;
+    color: #e6e6e6;
+}
+
+.colum{
+    margin: 20px;
+    
+}
+
+.fila{
+    font-size: 25px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.fila p{
+    margin: 10px;
+    color: white;
+}
+
+.fila a{ 
+    text-decoration: none;
+    
+}
+
+
+
+/*DISEÑP RESPONSIVO*/
+
+
+
+@media screen and (max-width:768px) {
+    .conte{
+        display: inline-block;
+        flex-direction: column;
+        background: var(--principal);
+    }
+
+    .contl{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background: var(--principal);
+    }
+
+    .contr{
+        display: flex;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        background: var(--principal);
+    }
+
+
+    .conte a{
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .btn-inicio{
+        background: var(--principal);
+        border: 0;
+        color: #e6e6e6;
+        width: 100%;
+        height: auto;
+        border-radius:0;
+        border-radius: 2px;
+    }
+
+    .btn-publico{
+        background: var(--principal);
+        border: 0;
+        color: #e6e6e6;
+        width: 100%;
+        height: auto;
+        border-radius:0;
+        margin: 0;
+        border-radius: 2px;
+    }
+
+    .btn-eventos{
+        background: var(--principal);
+        border: 0;
+        color: #e6e6e6;
+        width: 100%;
+        height: auto;
+        border-radius:0;
+        margin: 0;
+        border-radius: 2px;
+    }
+
+    .btn-estudiantes{
+        background: var(--principal);
+        border: 0;
+        color: #e6e6e6;
+        width: 100%;
+        height: auto;
+        border-radius:0;
+        margin: 0;
+        border-radius: 2px;
+    }
+
+    .btn-log{
+        border: 0;
+        background: var(--principal);
+        width: 100%;
+        height: auto;
+        border-radius:2px;
+        margin: 0;
+        
+    }
+
+    .conte a:hover{
+        transform: translateX(3px) translateY(2px);
+        transition: all 0.8ms;
+    }
+
+    .btn-inicio:hover{
+        background: #104a9b;
+        transition: all 0.8ms;
+        box-shadow: 5px 5px 100px black;
+    }
+
+    .btn-publico:hover{
+        background: #104a9b;
+        transition: all 0.8ms;
+        box-shadow: 5px 5px 100px black;
+    }
+
+    .btn-eventos:hover{
+        background: #104a9b;
+        transition: all 0.8ms;
+        box-shadow: 5px 5px 100px black;
+    }
+
+    .btn-estudiantes:hover{
+        background: #104a9b;
+        transition: all 0.8ms;
+        box-shadow: 5px 5px 100px black;
+    }
+
+    .btn-log:hover{
+        background: #104a9b;
+        transition: all 0.8ms;
+        box-shadow: 5px 5px 100px black;
+    }
+
+    .cuerpo{
+        width: 100%;
+        height: 50px;
+    }
+}
+
+
+
+@media screen and (max-width:611px){
+    .cont-by{
+        transition: all 0.8ms;
+    }
+}
+
+
